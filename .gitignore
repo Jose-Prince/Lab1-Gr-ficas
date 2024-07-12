@@ -1,0 +1,41 @@
+# Ignorar la carpeta target
+/target
+
+# Ignorar el archivo de lock de paquetes
+Cargo.lock
+
+# Ignorar archivos de compilación de Rust
+**/*.rs.bk
+**/*.rs~
+
+# Ignorar archivos de compilación temporales de editores comunes
+**/*~
+**/#*#
+**/.#*
+
+# Ignorar archivos de compilación de editores
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Ignorar archivos de configuración del editor VS Code
+.vscode/
+
+# Ignorar archivos de configuración de otros editores/IDE
+.idea/
+*.iml
+
+# Ignorar archivos de macOS
+.DS_Store
+
+# Ignorar archivos de Thumbs.db de Windows
+Thumbs.db
+
+# Ignorar binarios generados por cargo build
+/debug
+/release
+
+# Ignorar archivos generados por pruebas
+/tests
