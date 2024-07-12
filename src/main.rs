@@ -77,3 +77,4 @@ fn main() {
         eprintln!("Error al guardar el archivo BMP: {}", e);
     }
 }
+
