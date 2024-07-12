@@ -32,7 +32,7 @@ impl Framebuffer {
 
     pub fn point(&mut self, x: isize, y: isize) {
         if x >= 0 && y >= 0 && (x as usize) < self.width && (y as usize) < self.height {
-            let index = (self.width * y as usize) + x as usize;
+            let index = (self.width * (self.height - 1 - y as usize)) + x as usize;
             self.buffer[index] = self.current_color.to_hex();
         }
     }
@@ -47,7 +47,7 @@ impl Framebuffer {
 
     pub fn get_point(&self, x: isize, y: isize) -> Option<u32> {
         if x >= 0 && y >= 0 && (x as usize) < self.width && (y as usize) < self.height {
-            let index = (self.width * y as usize) + x as usize;
+            let index = (self.width * (self.height - 1 - y as usize)) + x as usize;
             Some(self.buffer[index])
         } else {
             None
